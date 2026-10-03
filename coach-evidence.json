@@ -1,0 +1,106 @@
+{
+  "version": "2026-10-03.2",
+  "reviewedAt": "2026-10-03",
+  "reviewProcess": "人工核对官方说明及摘要；未声称获得机构认证或完成全文系统评价",
+  "sources": [
+    {
+      "id": "acsm-progress",
+      "title": "ACSM 2026 力量训练立场声明",
+      "published": "2026-04-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/",
+      "locator": "Abstract: Conclusions; Eligibility criteria",
+      "population": "健康成年人；研究干预通常至少六周",
+      "type": "专业机构立场声明 / 系统综述汇总",
+      "conclusion": "健康成年人可通过渐进力量训练改善肌肉功能。",
+      "limit": "不直接规定本 App 的观察天数、RIR 门槛或每次增加一次；这些属于保守产品规则。"
+    },
+    {
+      "id": "acsm-personalize",
+      "title": "ACSM 2026 官方训练指南说明",
+      "published": "2026-03-17",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "locator": "Individualization Matters More Than Rigid Rules",
+      "population": "一般健康成年人",
+      "type": "官方指南说明",
+      "conclusion": "按目标、时间及个人情况安排训练，重视长期执行。",
+      "limit": "一般指南不能证明某个个人计划最优。"
+    },
+    {
+      "id": "acsm-failure",
+      "title": "ACSM 2026 力量训练立场声明",
+      "published": "2026-04-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/",
+      "locator": "Abstract: Results",
+      "population": "健康成年人",
+      "type": "专业机构立场声明 / 系统综述汇总",
+      "conclusion": "研究没有一致显示练到瞬时力竭会改善训练结果。",
+      "limit": "不代表所有人和所有目标都应使用同一余力。"
+    },
+    {
+      "id": "niddk-scope",
+      "title": "NIH / NIDDK Body Weight Planner 适用范围",
+      "published": "2017-05",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/body-weight-planner",
+      "locator": "Disclaimer; Last Reviewed",
+      "population": "成年人；不适用于未成年人、孕期或哺乳期",
+      "type": "政府机构健康信息",
+      "conclusion": "个人体重规划工具不替代了解病史的医护专业人员。",
+      "limit": "不用于支持本 App 自动调整热量或伤病康复处方。"
+    },
+    {
+      "id": "NIDDK-diet",
+      "title": "NIDDK：选择可持续的体重管理方案",
+      "published": "核对于2026-10-03",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program",
+      "locator": "结论与适用范围；官方网站说明 / 论文摘要",
+      "population": "一般健康成年人；个体化应用需结合健康情况",
+      "type": "政府机构饮食资料",
+      "conclusion": "按个人健康、偏好、文化、预算选择可长期坚持的健康饮食与活动；能量调整是个体估计，不存在适合所有人的同一饮食方案。",
+      "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    },
+    {
+      "id": "DASH",
+      "title": "NHLBI：DASH 饮食",
+      "published": "核对于2026-10-03",
+      "url": "https://www.nhlbi.nih.gov/health/dash-eating-plan",
+      "locator": "结论与适用范围；官方网站说明 / 论文摘要",
+      "population": "一般健康成年人；个体化应用需结合健康情况",
+      "type": "政府机构饮食资料",
+      "conclusion": "DASH 强调蔬果、全谷、豆类、适量低脂奶与瘦肉，减少钠和饱和脂肪；具体份量按能量需要调整。疾病相关限钠、限钾等需专业评估。",
+      "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    },
+    {
+      "id": "AHA-patterns",
+      "title": "AHA 2023：饮食模式与心血管健康指南的匹配",
+      "published": "2023",
+      "url": "https://professional.heart.org/en/science-news/popular-dietary-patterns-alignment-with-american-heart-association-2021-dietary-guidance/top-things-to-know",
+      "locator": "结论与适用范围；官方网站说明 / 论文摘要",
+      "population": "一般健康成年人；个体化应用需结合健康情况",
+      "type": "专业机构立场声明",
+      "conclusion": "DASH、地中海、鱼素及蛋奶素食等可符合心血管健康原则。强调食物质量、文化及长期可持续性，不能据此认定任何一种对个人减脂最优；不支持把碳循环当唯一或默认方案。",
+      "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    },
+    {
+      "id": "ISSN-protein",
+      "title": "ISSN 2017：运动人群蛋白质立场声明",
+      "published": "2017",
+      "url": "https://link.springer.com/article/10.1186/s12970-017-0177-8",
+      "locator": "结论与适用范围；官方网站说明 / 论文摘要",
+      "population": "一般健康成年人；个体化应用需结合健康情况",
+      "type": "专业机构立场声明",
+      "conclusion": "一般健康运动成年人，日蛋白质约1.4–2.0g/kg可支持肌肉适应；按活动和目标个体化，不是肾病、孕哺或所有人的处方，也不要求补剂。",
+      "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    },
+    {
+      "id": "spot-reduction",
+      "title": "Human Movement 2022：局部训练与局部脂肪减少的系统综述 / 荟萃分析",
+      "published": "2022",
+      "url": "https://hummov.awf.wroc.pl/A-proposed-model-to-test-the-hypothesis-of-exercise-induced-localized-fat-reduction,143162,0,2.html",
+      "locator": "结论与适用范围；官方网站说明 / 论文摘要",
+      "population": "一般健康成年人；个体化应用需结合健康情况",
+      "type": "研究系统综述",
+      "conclusion": "汇总研究未观察到局部训练引起局部减脂的效应。梨形、苹果形等外观标签不能推出局部减脂处方；训练可根据实际力量、动作能力与比例偏好个体化。这是研究综述，不是体型专属训练指南。",
+      "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    }
+  ]
+}

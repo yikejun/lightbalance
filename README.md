@@ -1,0 +1,88 @@
+# 轻衡 LightBalance · iOS 1.5
+
+一个 SwiftUI 个人饮食、力量训练、健康数据与 AI 计划助手。完整 App、动作插图、测试、模型提示词和可选服务器源码开放；代码 MIT，第三方插图保留原许可。
+
+## 获取完整源码
+
+下载仓库里的 **[LightBalance-1.5-Source.zip](LightBalance-1.5-Source.zip)**，解压后打开 `LightBalance.xcodeproj`。压缩包是完整可构建源码，包含所有训练图片，不是安装包。仓库同时公开 README、许可证和指南清单，便于查看。
+
+## 安装到自己的 iPhone
+
+1. 准备 Mac、Xcode 和 iPhone。项目最低 iOS 17，已用 Xcode 26.3 构建；Xcode 及其 iOS 设备支持组件需要兼容你的手机系统。具体兼容范围以 [Apple Xcode 支持表](https://developer.apple.com/support/xcode/) 为准。
+2. 用 Xcode 打开解压后的 `LightBalance.xcodeproj`，选择 `LightBalance` target → Signing & Capabilities。保留 Automatically manage signing，Team 选择**你自己的** Apple 账号。
+3. 将 Bundle Identifier 改成自己唯一的值，例如 `com.yourname.lightbalance`。源码不带开发者签名、证书或服务令牌。
+4. 用数据线连接并解锁手机，按系统提示信任 Mac；开发运行需要在 iPhone 设置中启用开发者模式并按提示重启确认。
+5. 在 Xcode 顶部运行设备选择你的 iPhone，点击 ▶︎。若手机要求信任开发者，按设置中的设备管理提示完成。
+6. 免费 Personal Team 安装需要定期重新签名，设备上具体有效期以 Xcode 生成的描述文件为准。这个源码包不是 App Store / TestFlight 分发，也没有可供所有手机通用安装的签名 IPA。
+
+不要先删除旧 App。使用同一个 Bundle Identifier 覆盖更新会保留容器中的记录；更新前可在 App 设置导出 JSON 备份。卸载会移除本地数据。
+
+## 首次使用与模型配置
+
+- 首次输入年龄、身高、当前体重与健身目标。也可以先保存，之后再建立计划。不会把开发者的身体资料或服务地址作为你的默认资料。
+- 进入“计划与设置 → 照片自动识别 → 识别与授权”，填写**自己的 OpenAI API Key**，并选择账号可用的支持图片与结构化输出的模型。API Key 保存在本机钥匙串，不提交到仓库。
+- 默认构建使用 `LIGHTBALANCE_USER_API`，直接访问官方 OpenAI Responses API，不需要开发者服务器。需要独立 API 计费；ChatGPT Plus 订阅不等于 API 额度。参考 [OpenAI API 入门](https://developers.openai.com/api/docs/quickstart)。可用地区、模型和额度以账户及官方要求为准。
+- 未配置模型仍可记录饮食、训练、身体数据及读取已授权的健康数据；AI 生成功能需稍后配置。
+
+## 使用流程
+
+**个人计划：**“身体数据、目标与 AI 建立计划”会提示缺少的必填项。填写经验、可用时间、器械与健康限制，可选填体型、比例侧重、饮食偏好、过敏和生活条件。生成先预览，确认后更新训练计划、四日型营养目标与周预算；周预算校验为周一至周日目标合计，历史记录保留。可随时从同一入口提出新想法并重新生成。
+
+**体型与饮食：**梨形、苹果形等作为自述偏好，结合能力与测量调整比例/力量侧重，不用于诊断或承诺局部减脂。模型根据实际情况选择均衡家常、地中海、DASH、蛋奶素食、运动表现或可选碳循环，餐数由用户自己决定。资料与适用范围在 `Research/Evidence/`，区分机构指南、健康信息与研究综述；AI 建议需要本人确认。
+
+**餐前拍照：**拍食物，可附加多张营养标签。先估计这一餐，判断与剩余目标的关系并提出增减食物/份量建议。估计不会自动成为摄入记录；按实际吃下的部分确认后才保存。摄入估算区间可留空。表单、照片及已返回的 AI 方案保存为草稿，应用进程终止会中断进行中的请求，但可从已保存输入重新发起。
+
+**饮食聊天：**剩余热量不知道吃什么时，可询问 AI 食物组合和份量，建议不会自动记账。
+
+**力量训练：**从动作库选动作并填写实际重量、次数/秒、组数和余力。每个动作有一张识别插图；图像不代表完整技术教学。
+
+## Apple 健康 / 健身
+
+在“Apple 健康 → 健康授权与数据”申请读取权限，允许希望同步的项目：训练、步数、体重、体脂、腰围、睡眠、活动能量、静息心率及 HRV。App 只读取，不写回健康。
+
+- iPhone / Apple Watch 或其他 App 保存到 **Apple 健康 HealthKit** 的近 28 天训练，会同步到“我的训练”，显示来源、时间和时长。Apple“健身”不是另一个登录接口，相关训练须先进入健康数据库。
+- 首次授权后手动刷新；此后 App 回到前台会刷新，短时间内有一分钟节流。不是后台实时同步，也无法读取被拒绝或尚未同步到手机的数据。Apple 不提供读权限是否拒绝的明确状态，空数据不等于未运动。
+- 健康训练不包含逐组重量、次数和余力，需手动补充；不会编造。重复 UUID 不新增。疑似与手动训练重复时，可选择合并或确认为不同训练，合并保留手动组数。
+- 身体与睡眠回填是单独的可选开关；保留手动输入，更新曾导入的值。睡眠重叠区间去重，并支持来源选择。
+
+## 每周 Agent 与计划更新接口
+
+默认 API 版在“每周 Agent”页面由本人触发生成，使用近 28 天实际记录与已同步健康摘要；手机应用未运行时不会自行调用模型。缺睡眠等可选数据仍输出总结，只对具体调整需要的数据判断是否充分。方案须有提供资料的支持，区分指南结论与个体推断，确认后才替换训练计划。
+
+可选 `Backend/Weekly/weekly_service.py` 是**单用户**服务：启用本人同意后接收摘要，按服务器 timer 在周日 20:00（Asia/Shanghai）生成候选周报。每个用户需要独立身份与数据隔离；现有实现没有多人账号后台，不要把一个服务令牌共享给多人。默认 API 版无需这个服务器。
+
+可选 gateway 提供：
+
+| 接口 | 用途 |
+| --- | --- |
+| `POST /plans/generate` | 资料、历史摘要、要求 → 候选个人计划；不自动应用 |
+| `POST /meal-preview` | 食物与标签图片 → 餐前估计及份量建议 |
+| `POST /chat` | 剩余营养目标 → 食物建议 |
+| `/coach/consent`、`/coach/snapshot`、`/coach/inbox`、`/coach/decision` | 单用户周报授权、摘要、候选方案和确认 |
+
+请求结构和校验见 `Backend/plan_ai.py`、`LightBalance/PersonalPlanViews.swift`、`Backend/Weekly/weekly_service.py`。个人计划生成接口不允许外部请求静默改写手机数据，更新需要 App 中确认。服务器只绑定本机地址，须自行配置 HTTPS、身份验证、受限服务用户、私密凭据与定时器；示例 systemd 文件需根据自己的服务环境检查后配置。不要将密钥写入源码、README、URL 或日志。
+
+若自行使用服务器版，需要移除 `LIGHTBALANCE_USER_API` 编译条件、配置自己的 HTTPS gateway 地址和访问令牌。个人 ChatGPT 订阅桥接属于另外的官方账户授权及自托管适用范围核实，不能由“开源”推出资格；本仓库不提供公共 Plus 额度服务。
+
+## 隐私与限制
+
+记录和草稿保存在本机。启用 AI 并确认发送后，所选图片或有关身体/训练摘要会发送至配置的模型服务；发送项目在 App 内提示。导出包含健康与餐食数据，请自行保护，不要上传 issue。API Key 不进入 JSON 导出。未包含开发者的原始计划分享链接、个人健康记录、照片、服务器地址或密钥。
+
+这是个人记录与健康成人训练规划工具，非医疗诊断或疾病治疗。摄入、照片份量与消耗均有估计误差；运动消耗不直接等于应额外吃回的热量。资料适用范围不明、伤病、孕哺或其他需评估情况会要求补充或专业评估。
+
+## 开发与验证
+
+```sh
+sh Tests/verify.sh
+python3 -m unittest discover -s Backend -p 'test_*.py'
+python3 -m unittest discover -s Backend/Weekly -p test_weekly.py
+python3 Tools/build_personal_api.py
+python3 Tools/build_coach_evidence.py
+python3 Tools/build_weekly_api.py
+```
+
+模型提示词、严格结构和校验同时用于本机 API 与 gateway。服务端入口的日请求上限与模型额度独立；失败不会保存为摄入或自动应用计划。本发布已完成两个 iPhone 版本构建、本地记录兼容检查、重复训练合并检查、预算一致性检查及真实模型虚构资料验证。
+
+## 许可证
+
+代码 [MIT](LICENSE)，素材详情见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。第三方训练插图按原 CC BY-SA 等许可署名与分发。开源不包含签名证书、账号凭据，也不改变 OpenAI 或 Apple 的平台要求。

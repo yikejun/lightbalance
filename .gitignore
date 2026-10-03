@@ -1,0 +1,15 @@
+.DS_Store
+DerivedData/
+Builds/
+xcuserdata/
+*.xcuserstate
+.env
+.env.*
+!*.example
+*.key
+*.pem
+*.mobileprovision
+records.json
+Drafts/
+__pycache__/
+*.pyc

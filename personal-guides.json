@@ -1,0 +1,53 @@
+{
+  "reviewedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "WHO2020",
+      "title": "WHO Guidelines on physical activity and sedentary behaviour",
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "facts": "成人每周150–300分钟中等强度或75–150分钟高强度有氧；主要肌群力量训练每周至少2天；从能力允许的少量活动逐步增加。"
+    },
+    {
+      "id": "ACSM2026",
+      "title": "ACSM Resistance Training Guidelines 2026",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "facts": "健康成年人规律训练所有主要肌群；根据目标、能力和可持续性个体化，不要求复杂器械或每组力竭。"
+    },
+    {
+      "id": "NIDDK",
+      "title": "NIDDK Body Weight Planner",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/body-weight-planner",
+      "facts": "个体化体重管理需要体重、年龄、身高、性别与活动信息；该工具适用于18岁以上成人，不用于孕期或哺乳期。此App未运行该工具，不能声称其验证了具体热量。"
+    },
+    {
+      "id": "NIDDK-diet",
+      "title": "NIDDK：选择可持续的体重管理方案",
+      "url": "https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program",
+      "facts": "按个人健康、偏好、文化、预算选择可长期坚持的健康饮食与活动；能量调整是个体估计，不存在适合所有人的同一饮食方案。"
+    },
+    {
+      "id": "DASH",
+      "title": "NHLBI：DASH 饮食",
+      "url": "https://www.nhlbi.nih.gov/health/dash-eating-plan",
+      "facts": "DASH 强调蔬果、全谷、豆类、适量低脂奶与瘦肉，减少钠和饱和脂肪；具体份量按能量需要调整。疾病相关限钠、限钾等需专业评估。"
+    },
+    {
+      "id": "AHA-patterns",
+      "title": "AHA 2023：饮食模式与心血管健康指南的匹配",
+      "url": "https://professional.heart.org/en/science-news/popular-dietary-patterns-alignment-with-american-heart-association-2021-dietary-guidance/top-things-to-know",
+      "facts": "DASH、地中海、鱼素及蛋奶素食等可符合心血管健康原则。强调食物质量、文化及长期可持续性，不能据此认定任何一种对个人减脂最优；不支持把碳循环当唯一或默认方案。"
+    },
+    {
+      "id": "ISSN-protein",
+      "title": "ISSN 2017：运动人群蛋白质立场声明",
+      "url": "https://link.springer.com/article/10.1186/s12970-017-0177-8",
+      "facts": "一般健康运动成年人，日蛋白质约1.4–2.0g/kg可支持肌肉适应；按活动和目标个体化，不是肾病、孕哺或所有人的处方，也不要求补剂。"
+    },
+    {
+      "id": "spot-reduction",
+      "title": "Human Movement 2022：局部训练与局部脂肪减少的系统综述 / 荟萃分析",
+      "url": "https://hummov.awf.wroc.pl/A-proposed-model-to-test-the-hypothesis-of-exercise-induced-localized-fat-reduction,143162,0,2.html",
+      "facts": "汇总研究未观察到局部训练引起局部减脂的效应。梨形、苹果形等外观标签不能推出局部减脂处方；训练可根据实际力量、动作能力与比例偏好个体化。这是研究综述，不是体型专属训练指南。"
+    }
+  ]
+}
