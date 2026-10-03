@@ -1,10 +1,10 @@
-# 轻衡 LightBalance · iOS 1.5
+# 轻衡 LightBalance · iOS 1.6
 
 一个 SwiftUI 个人饮食、力量训练、健康数据与 AI 计划助手。完整 App、动作插图、测试、模型提示词和可选服务器源码开放；代码 MIT，第三方插图保留原许可。
 
 ## 获取完整源码
 
-下载仓库里的 **[LightBalance-1.5-Source.zip](LightBalance-1.5-Source.zip)**，解压后打开 `LightBalance.xcodeproj`。压缩包是完整可构建源码，包含所有训练图片，不是安装包。仓库同时公开 README、许可证和指南清单，便于查看。
+下载仓库里的 **[LightBalance-1.6-Source.zip](LightBalance-1.6-Source.zip)**，解压后打开 `LightBalance.xcodeproj`。压缩包是完整可构建源码，包含所有训练图片，不是安装包。仓库同时公开 README、许可证和指南清单，便于查看。
 
 ## 安装到自己的 iPhone
 
@@ -20,9 +20,16 @@
 ## 首次使用与模型配置
 
 - 首次输入年龄、身高、当前体重与健身目标。也可以先保存，之后再建立计划。不会把开发者的身体资料或服务地址作为你的默认资料。
-- 进入“计划与设置 → 照片自动识别 → 识别与授权”，填写**自己的 OpenAI API Key**，并选择账号可用的支持图片与结构化输出的模型。API Key 保存在本机钥匙串，不提交到仓库。
-- 默认构建使用 `LIGHTBALANCE_USER_API`，直接访问官方 OpenAI Responses API，不需要开发者服务器。需要独立 API 计费；ChatGPT Plus 订阅不等于 API 额度。参考 [OpenAI API 入门](https://developers.openai.com/api/docs/quickstart)。可用地区、模型和额度以账户及官方要求为准。
+- 进入“计划与设置 → 照片自动识别 → 识别与授权”，填写**自己供应商的 API Key**，并选择账号可用的支持图片与结构化输出的模型。API Key 保存在本机钥匙串，不提交到仓库。
+- 默认构建使用 `LIGHTBALANCE_USER_API`，默认官方 OpenAI Responses API，也可填写非 OpenAI 的 HTTPS Base URL（例如 `https://服务地址/v1`）、模型及兼容协议。选择 Chat Completions 时，请按供应商能力选择 JSON Schema 或 JSON Object。更换服务主机需重新输入该供应商的 Key；授权提示显示实际服务主机，不自动重定向或切换供应商。无需开发者服务器，按供应商计费；ChatGPT Plus 订阅不等于 API 额度。参考 [OpenAI API 入门](https://developers.openai.com/api/docs/quickstart)。可用地区、模型和额度以账户及官方要求为准。
 - 未配置模型仍可记录饮食、训练、身体数据及读取已授权的健康数据；AI 生成功能需稍后配置。
+
+## 1.6 更新
+
+- 有氧训练名称与分类独立保存；HIIT / 间歇训练按有氧识别。健康同步保留用户编辑，并修正旧的通用名称与未识别分类。
+- 个人计划统一训练目标、时间及实际器械；旧训练条件入口转到同一表单。动作库可优先显示符合个人器械条件的动作，仍可搜索、筛选和选择其他动作。
+- 趋势中本周期周报按现有记录实时计算，分别列力量、有氧 / HIIT 次数与分钟数、柔韧、其他及待确认重复训练，支持手动刷新健康数据。这里是本机统计；云端 AI 周报仍基于生成时的摘要。
+- API 版支持自定义 HTTPS Base URL，选择 Responses 或 Chat Completions 兼容接口；Chat Completions 可选 JSON Schema 或 JSON Object。后者仍通过本机业务校验，错误或不完整方案不能应用。照片需要支持图片输入的模型；原生 Anthropic / Gemini 协议需要兼容转换层。本次完成协议转换与模拟返回测试，未用真实第三方供应商密钥验证。
 
 ## 使用流程
 
@@ -63,6 +70,10 @@
 请求结构和校验见 `Backend/plan_ai.py`、`LightBalance/PersonalPlanViews.swift`、`Backend/Weekly/weekly_service.py`。个人计划生成接口不允许外部请求静默改写手机数据，更新需要 App 中确认。服务器只绑定本机地址，须自行配置 HTTPS、身份验证、受限服务用户、私密凭据与定时器；示例 systemd 文件需根据自己的服务环境检查后配置。不要将密钥写入源码、README、URL 或日志。
 
 若自行使用服务器版，需要移除 `LIGHTBALANCE_USER_API` 编译条件、配置自己的 HTTPS gateway 地址和访问令牌。个人 ChatGPT 订阅桥接属于另外的官方账户授权及自托管适用范围核实，不能由“开源”推出资格；本仓库不提供公共 Plus 额度服务。
+
+## 请求次数限制
+
+API 直连版不使用开发者服务器的本地次数计数，仍受自己供应商的额度与速率限制。可选单用户 gateway 使用 `HOURLY_LIMIT` / `DAILY_LIMIT` 控制有效模型请求：餐前识别、饮食聊天和个人计划生成共用；滚动窗口而非午夜清零。已预留的请求即使模型调用失败也计入。默认代码为每小时30、滚动24小时10，可在自己的部署环境调整；这不是模型供应商公布的订阅额度，周报服务单独调度。
 
 ## 隐私与限制
 
