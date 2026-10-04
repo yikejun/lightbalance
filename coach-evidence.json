@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-03.2",
-  "reviewedAt": "2026-10-03",
+  "version": "2026-10-04.3",
+  "reviewedAt": "2026-10-04",
   "reviewProcess": "人工核对官方说明及摘要；未声称获得机构认证或完成全文系统评价",
   "sources": [
     {
@@ -101,6 +101,116 @@
       "type": "研究系统综述",
       "conclusion": "汇总研究未观察到局部训练引起局部减脂的效应。梨形、苹果形等外观标签不能推出局部减脂处方；训练可根据实际力量、动作能力与比例偏好个体化。这是研究综述，不是体型专属训练指南。",
       "limit": "不能证明个人最优方案或充当疾病、伤病与孕哺处方。"
+    },
+    {
+      "id": "NICE-diet2025",
+      "title": "NICE NG246：个体化饮食与多种宏量营养方法",
+      "url": "https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet",
+      "published": "2025",
+      "type": "临床指南",
+      "population": "超重或肥胖体重管理人群；App仅自动规划符合适用范围的健康成年人",
+      "locator": "1.16.1–1.16.6; Rationale and impact",
+      "limit": "个体化因素部分来自委员会经验，指南不能指定哪种饮食对某种身材必然最优。疾病、饮食障碍及低能量饮食需相应专业支持。",
+      "conclusion": "按食物偏好、文化、家庭经济及个人情况采用灵活个体化饮食；低脂、低碳或其他方法均可用于形成能量缺口，并兼顾营养均衡与长期支持。"
+    },
+    {
+      "id": "DIRECT2008",
+      "title": "DIRECT：地中海、低碳与低脂饮食两年随机试验",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18635428/",
+      "published": "2008-07-17",
+      "type": "随机对照试验",
+      "population": "322名中度肥胖成人，平均年龄52岁，86%男性；2年",
+      "locator": "Abstract: Results; Conclusions",
+      "limit": "研究人群及食堂支持限制外推；不能把群体结果当个人保证，不能按梨形/苹果形指定低碳，也不自动为疾病开治疗饮食。",
+      "conclusion": "地中海及低碳饮食是低脂饮食的有效替代方法；不同组体重及代谢指标变化不同。支持结合偏好和代谢情况考虑饮食选择。"
+    },
+    {
+      "id": "DIETFITS2018",
+      "title": "DIETFITS：健康低脂与健康低碳饮食随机试验",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2673150",
+      "published": "2018-02-20",
+      "type": "随机对照试验",
+      "population": "609名18–50岁无糖尿病超重/肥胖成年人；12个月",
+      "locator": "Key Points; Abstract",
+      "limit": "所测试的基因模式和初始胰岛素分泌没有预测哪种更优；不能据体型、未经验证代谢标签或一周体重波动确定最优饮食。",
+      "conclusion": "健康低脂与健康低碳均出现体重下降，12个月组间差异不显著。支持两种可选路径及食物质量、可持续性的重要性。"
+    },
+    {
+      "id": "TRE2022",
+      "title": "Liu 等 2022：限时进食结合热量限制随机试验",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2114833",
+      "published": "2022-04-21",
+      "type": "随机对照试验",
+      "population": "139名肥胖成年人；12个月",
+      "locator": "Abstract: Methods; Results; Conclusions",
+      "limit": "不能宣传断食具有必然额外减脂优势；不强制两餐。孕哺、低体重、进食障碍或使用易引起低血糖的药物等不自动建议断食。",
+      "conclusion": "8小时限时进食加热量限制与单纯热量限制均使体重下降；未显示限时组在体重、体脂及代谢风险方面额外获益。可把进食时间作为个人作息偏好的执行方式讨论。"
+    },
+    {
+      "id": "Cleveland-body-shape",
+      "title": "Cleveland Clinic：身材形状与健康",
+      "url": "https://health.clevelandclinic.org/what-body-shape-means-for-your-health",
+      "published": "2023-01-14",
+      "type": "医疗机构官方健康科普 / 医生访谈",
+      "population": "一般成人；风险讨论主要涉及超重或肥胖者",
+      "locator": "Apple shape; Pear shape; Inverted triangle; How to keep a healthy body shape",
+      "limit": "健康文章，不是体型专属处方或比例塑形试验。任何体型都可能健康，不从外观诊断疾病、推定疼痛或骨骼比例；部位运动不能解释为只减该处脂肪。",
+      "conclusion": "讨论苹果、梨、倒三角、直筒、沙漏外观及健康情况。苹果形关注腰围和健康体重；梨形可选择步行登山、骑行等活动；背部强化及低冲击全身活动可按实际能力考虑。身材可作为询问腰围、关节舒适度及活动偏好的起点。"
+    },
+    {
+      "id": "NASM-body-types",
+      "title": "NASM：身体类型如何用于个体化训练设计",
+      "url": "https://www.nasm.org/resource-center/blog/fitness/body-types-explained-mesomorph-ectomorph-and-endomorph",
+      "published": "2026-07-17（更新）",
+      "type": "健身教育机构官网教练文章",
+      "population": "教练评估成人客户的身体基础及训练目标",
+      "locator": "How Personal Trainers Can Use Body Types; Frequently Asked Questions",
+      "limit": "内胚/中胚/外胚型与梨形/苹果形不是同一分类，不能直接互相换算。文章明确类型是宽泛描述而非精确科学系统，不能由外观决定代谢、热量需求或固定方案。",
+      "conclusion": "身体类型可帮助形成初始训练方向；偏瘦且想增肌可重视力量、足够能量和蛋白质，脂肪较多且想减脂可重视力量、日常活动及可坚持饮食。最终依据目标、动作能力、恢复和实际反应调整。"
+    },
+    {
+      "id": "ACE-exercise-library",
+      "title": "ACE 美国运动委员会：官方动作教程库",
+      "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+      "published": "未标统一发布日期；2026-10-04核对",
+      "type": "健身教育机构官方动作教程库",
+      "population": "从初学者到已有训练经验者；依具体动作难度选用",
+      "locator": "Exercises by Body Part; Equipment; Difficulty",
+      "limit": "本次核对的是动作库入口及分类，不宣称已核对全部动作详情。教程不证明某体型固定配比最优，也不授权复制整站图片。",
+      "conclusion": "按目标身体部位、器械和难度选择动作，提供说明与示范图片。可用于把希望发展的部位落实到动作候选，再结合器械和能力筛选。"
+    },
+    {
+      "id": "Mayo-weight-technique",
+      "title": "Mayo Clinic：力量训练正确动作与常见错误",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/weight-training/art-20045842",
+      "published": "2026-01-21",
+      "type": "医疗机构官方运动教程",
+      "population": "一般力量训练者；新手或动作不确定者可请专业人员指导",
+      "locator": "Check your technique; Weight training dos; Weight training donts",
+      "limit": "不是特定身材或长腿站距教程，不能替代身体比例实验得出同一结论。微调应来自实际表现和舒适度，不把通用动作指导包装成体型专属研究。",
+      "conclusion": "依据能维持正确动作的能力选择负荷；不能保持姿势时减少负荷或次数；覆盖主要肌群与对抗肌群，安排恢复。可按目标调整训练组数并按能力渐进。"
+    },
+    {
+      "id": "NASM-upper-lower",
+      "title": "NASM：上下肢分化训练官方编排教程",
+      "url": "https://www.nasm.org/resource-center/blog/training/upper-lower-splits-explained",
+      "published": "2026-08（更新）",
+      "type": "健身教育机构官网教练教程",
+      "population": "具备相应能力且可规律训练的成人；按实际评估选择",
+      "locator": "How to Structure It; Matching It to Client Goals; Limitations",
+      "limit": "常见模板不是所有人的固定处方；频次和约48小时恢复只是规划参考，不能不顾实际恢复或时间强行套用。",
+      "conclusion": "上下肢是内容分组，常用每周两次上肢、两次下肢；安排兼顾频次、恢复、可用天数与目标。次数不足时全身训练可作为替代。"
+    },
+    {
+      "id": "NASM-beginner-split",
+      "title": "NASM：初学者全身训练与分化的选择",
+      "url": "https://www.nasm.org/resource-center/blog/training/beginner-fitness-routine",
+      "published": "2026（网页更新年份；未核对具体日）",
+      "type": "健身教育机构官网教练教程",
+      "population": "开始或重新开始规律训练的成人；按动作能力和适用范围选择",
+      "locator": "Why full-body training works; Weekly structure",
+      "limit": "不代表有经验者不能选部位分化，不直接验证某四分法；具体动作和训练量仍需要个体化。",
+      "conclusion": "初学者全身安排可较频繁练习蹲、髋铰链、推、拉等模式，逐步培养动作能力；按训练经验、可用频次和恢复选择全身或分化。"
     }
   ]
 }
