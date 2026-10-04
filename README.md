@@ -1,10 +1,10 @@
-# 轻衡 LightBalance · iOS 1.7
+# 轻衡 LightBalance · iOS 1.7.1
 
 一个 SwiftUI 个人饮食、力量训练、健康数据与 AI 计划助手。完整 App、动作插图、测试、模型提示词和可选服务器源码开放；代码 MIT，第三方插图保留原许可。
 
 ## 获取完整源码
 
-下载仓库里的 **[LightBalance-1.7-Source.zip](LightBalance-1.7-Source.zip)**，解压后打开 `LightBalance.xcodeproj`。压缩包是完整可构建源码，包含所有训练图片，不是安装包。仓库同时公开 README、许可证和指南清单，便于查看。
+下载仓库里的 **[LightBalance-1.7.1-Source.zip](LightBalance-1.7.1-Source.zip)**，解压后打开 `LightBalance.xcodeproj`。压缩包是完整可构建源码，包含所有训练图片，不是安装包。仓库同时公开 README、许可证和指南清单，便于查看。
 
 ## 安装到自己的 iPhone
 
@@ -23,6 +23,10 @@
 - 进入“计划与设置 → 照片自动识别 → 识别与授权”，填写**自己供应商的 API Key**，并选择账号可用的支持图片与结构化输出的模型。API Key 保存在本机钥匙串，不提交到仓库。
 - 默认构建使用 `LIGHTBALANCE_USER_API`，默认官方 OpenAI Responses API，也可填写非 OpenAI 的 HTTPS Base URL（例如 `https://服务地址/v1`）、模型及兼容协议。选择 Chat Completions 时，请按供应商能力选择 JSON Schema 或 JSON Object。更换服务主机需重新输入该供应商的 Key；授权提示显示实际服务主机，不自动重定向或切换供应商。无需开发者服务器，按供应商计费；ChatGPT Plus 订阅不等于 API 额度。参考 [OpenAI API 入门](https://developers.openai.com/api/docs/quickstart)。可用地区、模型和额度以账户及官方要求为准。
 - 未配置模型仍可记录饮食、训练、身体数据及读取已授权的健康数据；AI 生成功能需稍后配置。
+
+## 1.7.1 修复
+
+修复新计划引用已配置的训练分化、身材及饮食资料时，被旧 App 校验清单误拒绝的问题。模型资源、校验 ID 与资料链接从同一份清单生成；新增全清单一致性和引用校验测试。仍拒绝未知或编造的来源，不影响已有计划和记录。
 
 ## 1.7 更新
 
